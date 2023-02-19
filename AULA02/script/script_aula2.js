@@ -15,6 +15,8 @@ if (valor1) {
 let valor3 = Number(prompt('Digite segundo valor: '))
 alert(valor2 + valor3)*/
 
+
+
 function getRandomInt(min, max) { 
     
     
@@ -24,11 +26,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min +1) + min);    
   }
 
+ 
 
- let jogador1 = prompt('pedra, papel, ou tesoura: ') 
+let jokenpo = () => {
 
- let jogador2 = getRandomInt(1,3); 
-
+    let jogador1 = prompt('pedra, papel, ou tesoura: ')
+    let jogador2 = getRandomInt(1,3); 
 
  if(jogador2 == 1) {
     alert("pedra"); 
@@ -41,9 +44,9 @@ else if(jogador2 == 3){
 };
 
 if(jogador1 == 'pedra' && jogador2 == 3) {
-   alert('Você' + ' ganhou!!! '+'Pedra quebra tesoura');       
+   alert('Você ganhou!!! Pedra quebra tesoura');       
 }else if(jogador1 == 'tesoura' && jogador2 == 1) {
-    alert('A maquina' + ' ganhou!!! '+'Pedra quebra tesoura');
+    alert('A maquina ganhou!!! Pedra quebra tesoura');
 }else if(jogador1 == 'papel' && jogador2 == 1) {
     alert('Você ganhou Papel embrulha pedra!!!');
 }else if( jogador2 == 2 && jogador1 == 'pedra') {
@@ -52,10 +55,25 @@ if(jogador1 == 'pedra' && jogador2 == 3) {
     alert('A maquina ganhou Tesoura corta papel!!!');
 }else if(jogador2 == 2 && jogador1 == 'tesoura') {
     alert('Você ganhou Tesoura corta papel');
+}else  {
+   alert('Jogo empatado') 
 }
-else {
-   alert('Jogo empatado')
+return jogador2 == alert('Papel');
 }
+
+for(let i = 0; i >= 0; i++) {
+    alert(jokenpo()) + [i]    
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
