@@ -4,7 +4,6 @@ console.log('Aula 02')
 // let valor = alert('Olá mundo')
 
 /*let valor1 = confirm('Deseja sair') 
-
 if (valor1) {
     alert('Saiu da aplicação')
 }else {
@@ -15,8 +14,6 @@ if (valor1) {
 let valor3 = Number(prompt('Digite segundo valor: '))
 alert(valor2 + valor3)*/
 
-
-
 function getRandomInt(min, max) { 
     
     
@@ -24,27 +21,14 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
 
     return Math.floor(Math.random() * (max - min +1) + min);    
-  }
-let jokenpo = () => {
 
-let jogador1 = prompt('pedra, papel, ou tesoura: ')
-
+  } 
+  
+  function player() {
+    let jogador1 = prompt('pedra, papel, ou tesoura: ')
 let jogador2 = getRandomInt(1,3); 
 
-
-
-let player = (jogador1,jogador2) => {    
-    if(jogador1 == 'pedra' && jogador2 == 3) {
-        alert('Você ganhou!!! Pedra quebra tesoura');       
-     }else if(jogador1 == 'papel' && jogador2 == 1) {
-        alert('Você ganhou Papel embrulha pedra!!!');
-    }else if(jogador2 == 2 && jogador1 == 'tesoura') {
-        alert('Você ganhou Tesoura corta papel');
-    }else  {
-        alert('Jogo empatado') 
-     }
-}
-
+  
 if(jogador2 == 1) {
     alert("pedra"); 
     }  
@@ -55,44 +39,64 @@ if(jogador2 == 1) {
     alert("tesoura");
     };
 
-let computador = (jogador1,jogador2) => {
-    if(jogador1 == 'tesoura' && jogador2 == 1) {
-    alert('A maquina ganhou!!! Pedra quebra tesoura');
+    if(jogador1 == 'pedra' && jogador2 == 3) {
+        alert('Você ganhou!!! Pedra quebra tesoura');       
+     }else if(jogador1 == 'papel' && jogador2 == 1) {
+        alert('Você ganhou Papel embrulha pedra!!!');
+    }else if(jogador2 == 2 && jogador1 == 'tesoura') {
+        alert('Você ganhou Tesoura corta papel');
+    }else if(jogador1 == 'tesoura' && jogador2 == 1) {
+        alert('A maquina ganhou!!! Pedra quebra tesoura');
+        }
+        else if( jogador2 == 2 && jogador1 == 'pedra') {
+            alert('A maquina ganhou Papel embrulha pedra !!!!');
+        }else if(jogador1 == 'papel' && jogador2 == 3) {
+            alert('A maquina ganhou Tesoura corta papel!!!');
+        }else {
+            alert('Jogo empatado');
+        }        
+  }
+
+  function computador() {
+    let jogador1 = prompt('pedra, papel, ou tesoura: ')
+let jogador2 = getRandomInt(1,3); 
+
+  
+if(jogador2 == 1) {
+    alert("pedra"); 
+    }  
+    else if(jogador2 == 2){
+    alert("papel");
     }
-    else if( jogador2 == 2 && jogador1 == 'pedra') {
-        alert('A maquina ganhou Papel embrulha pedra !!!!');
-    }else if(jogador1 == 'papel' && jogador2 == 3) {
-        alert('A maquina ganhou Tesoura corta papel!!!');
-    }else  {
-       alert('Jogo empatado') 
-    }
-}
+    else if(jogador2 == 3){
+    alert("tesoura");
+    };
+    if(jogador1 == 'pedra' && jogador2 == 3) {
+        alert('Você ganhou!!! Pedra quebra tesoura');       
+     }else if(jogador1 == 'papel' && jogador2 == 1) {
+        alert('Você ganhou Papel embrulha pedra!!!');
+    }else if(jogador2 == 2 && jogador1 == 'tesoura') {
+        alert('Você ganhou Tesoura corta papel');
+    }else if(jogador1 == 'tesoura' && jogador2 == 1) {
+        alert('A maquina ganhou!!! Pedra quebra tesoura');
+        }
+        else if( jogador2 == 2 && jogador1 == 'pedra') {
+            alert('A maquina ganhou Papel embrulha pedra !!!!');
+        }else if(jogador1 == 'papel' && jogador2 == 3) {
+            alert('A maquina ganhou Tesoura corta papel!!!');
+        }else {
+            alert('Jogo empatado');
+        }        
+  }
+    
+
+let jokenpo = () => { 
+
+alert(player()) == true
+alert(computador()) == false
+
 }
 
 for(let i = 0; i >= 0; i++) {
     alert(jokenpo()) + [i]    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
