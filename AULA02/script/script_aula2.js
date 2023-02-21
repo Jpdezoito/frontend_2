@@ -25,40 +25,48 @@ function getRandomInt(min, max) {
 
     return Math.floor(Math.random() * (max - min +1) + min);    
   }
-
- 
-
 let jokenpo = () => {
 
-    let jogador1 = prompt('pedra, papel, ou tesoura: ')
-    let jogador2 = getRandomInt(1,3); 
+let jogador1 = prompt('pedra, papel, ou tesoura: ')
 
- if(jogador2 == 1) {
+let jogador2 = getRandomInt(1,3); 
+
+
+
+let player = (jogador1,jogador2) => {    
+    if(jogador1 == 'pedra' && jogador2 == 3) {
+        alert('Você ganhou!!! Pedra quebra tesoura');       
+     }else if(jogador1 == 'papel' && jogador2 == 1) {
+        alert('Você ganhou Papel embrulha pedra!!!');
+    }else if(jogador2 == 2 && jogador1 == 'tesoura') {
+        alert('Você ganhou Tesoura corta papel');
+    }else  {
+        alert('Jogo empatado') 
+     }
+}
+
+if(jogador2 == 1) {
     alert("pedra"); 
-}  
-else if(jogador2 == 2){
+    }  
+    else if(jogador2 == 2){
     alert("papel");
-}
-else if(jogador2 == 3){
+    }
+    else if(jogador2 == 3){
     alert("tesoura");
-};
+    };
 
-if(jogador1 == 'pedra' && jogador2 == 3) {
-   alert('Você ganhou!!! Pedra quebra tesoura');       
-}else if(jogador1 == 'tesoura' && jogador2 == 1) {
+let computador = (jogador1,jogador2) => {
+    if(jogador1 == 'tesoura' && jogador2 == 1) {
     alert('A maquina ganhou!!! Pedra quebra tesoura');
-}else if(jogador1 == 'papel' && jogador2 == 1) {
-    alert('Você ganhou Papel embrulha pedra!!!');
-}else if( jogador2 == 2 && jogador1 == 'pedra') {
-    alert('A maquina ganhou Papel embrulha pedra !!!!');
-}else if(jogador1 == 'papel' && jogador2 == 3) {
-    alert('A maquina ganhou Tesoura corta papel!!!');
-}else if(jogador2 == 2 && jogador1 == 'tesoura') {
-    alert('Você ganhou Tesoura corta papel');
-}else  {
-   alert('Jogo empatado') 
+    }
+    else if( jogador2 == 2 && jogador1 == 'pedra') {
+        alert('A maquina ganhou Papel embrulha pedra !!!!');
+    }else if(jogador1 == 'papel' && jogador2 == 3) {
+        alert('A maquina ganhou Tesoura corta papel!!!');
+    }else  {
+       alert('Jogo empatado') 
+    }
 }
-return jogador2 == alert('Papel');
 }
 
 for(let i = 0; i >= 0; i++) {
