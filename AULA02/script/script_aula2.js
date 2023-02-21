@@ -92,11 +92,17 @@ if(jogador2 == 1) {
 
 let jokenpo = () => { 
 
+
 alert(player()) == true
 alert(computador()) == false
 
+
+
 }
 
-for(let i = 0; i >= 0; i++) {
-    alert(jokenpo()) + [i]    
-}
+
+for(let i = 0; i >= 0; i++) {      
+    alert(jokenpo()) + [i]
+            
+    }    
+
